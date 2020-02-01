@@ -11,21 +11,23 @@ class Anagram
   end
 
   def match(list)
+    # INSTRUCTIONS =====================
     # iterate over each word in the list
     # sort both input word and current word
     # compare for matches
+    # ==================================
+    
     sorted_input = @word.split("").sort
-    # binding.pry
     final_arr = []
     list.each do |list_el|
       sorted_el = list_el.split("").sort
       if sorted_el == sorted_input
-        binding.pry
-        return final_arr << list_el
+        final_arr << list_el
       else
-       return []
+      []
       end
     end
+    final_arr
   end
-
+  
 end
